@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication and Division</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input {
+            margin: 10px;
+            padding: 5px;
+            width: 80px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Sample Form:</h2>
+    <label>1st Number:</label>
+    <input type="number" id="num1"><br>
+    <label>2nd Number:</label>
+    <input type="number" id="num2"><br>
+
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function multiply() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let result = num1 * num2;
+        document.getElementById("result").innerHTML = `Multiplication: ${num1} x ${num2} = ${result}`;
+    }
+
+    function divide() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        if (num2 === 0) {
+            document.getElementById("result").innerHTML = "Division by zero is not allowed.";
+        } else {
+            let result = num1 / num2;
+            document.getElementById("result").innerHTML = `Division: ${num1} ÷ ${num2} = ${result}`;
+        }
+    }
+</script>
+
+</body>
+</html>
