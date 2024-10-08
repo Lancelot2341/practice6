@@ -1,0 +1,11 @@
+function sumTriple(a, b) {
+    if (a === b) {
+        return 3 * (a + b);
+    } else {
+        return a + b;
+    }
+}
+
+// Test cases (sample inputs from the image)
+console.log(sumTriple(10, 20));  // Output: 30
+console.log(sumTriple(10, 10));  // Output: 60
