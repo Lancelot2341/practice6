@@ -1,0 +1,20 @@
+function near_100(x, y) {
+  // Calculate the differences from 100 for both values
+  const diffX = Math.abs(100 - x);
+  const diffY = Math.abs(100 - y);
+
+  // Compare the absolute differences and return the closest value
+  if (diffX < diffY) {
+    return x;
+  } else if (diffX > diffY) {
+    return y;
+  } else {
+    // If the differences are equal, return the first value (x)
+    return x;
+  }
+}
+
+// Sample usage:
+console.log(near_100(90, 89)); // Output: 90
+console.log(near_100(-90, -89)); // Output: -89
+console.log(near_100(90, 90)); // Output: 90
