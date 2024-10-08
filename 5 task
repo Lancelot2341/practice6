@@ -1,0 +1,16 @@
+function first_half(str) {
+  // Check if the string length is even
+  if (str.length % 2 === 0) {
+    // Calculate the half length and extract the first half
+    const halfLength = str.length / 2;
+    return str.substring(0, halfLength);
+  } else {
+    // If the string length is odd, return an empty string
+    return "";
+  }
+}
+
+// Sample usage:
+console.log(first_half("Python")); // Output: Pyt
+console.log(first_half("JavaScript")); // Output: JavaS
+console.log(first_half("PHP")); // Output: PH
