@@ -1,0 +1,8 @@
+function max_of_three(a, b, c) {
+    return Math.max(a, b, c);
+}
+
+// Test cases (sample inputs from the image)
+console.log(max_of_three(1, 0, 1));    // Output: 1
+console.log(max_of_three(0, -10, -20)); // Output: 0
+console.log(max_of_three(1000, 510, 440)); // Output: 1000
